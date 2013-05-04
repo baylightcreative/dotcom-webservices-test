@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title>News | Mentions | Practice Fusion</title>
+
+	<script src="/webservices/public/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$.getJSON("/news_mentions/ajax_news_mentions", {
+				format: "json"
+			})
+			.done(function(data) {
+				console.log(data);
+			})
+			.fail(function(jaXHR, textStatus, errorThrown)) {
+				console.log("error");
+			}
+		});
+	</script>
+</body>
+</html>
